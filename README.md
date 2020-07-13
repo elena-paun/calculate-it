@@ -1,1 +1,1 @@
-![alt text](https://github.com/elenawq/calculate-it/blob/master/src/components/images/calculate-it.jpg)
+![alt text](https://github.com/elenawq/calculate-it/tree/master/src/components/Images/calculate-it.jpg)
