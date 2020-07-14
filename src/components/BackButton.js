@@ -16,6 +16,12 @@ const Button = styled.button`
   margin: 5px;
   display: inline-block;
   font-size: x-large;
+  @media (max-width: 415px) {
+    width: 50px;
+    height: 50px;
+    border-radius: 12.5px;
+    font-size: medium;
+  }
 `;
 export const BackButton = () => {
   const { handleBackButton } = useContext(NumberContext);

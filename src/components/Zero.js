@@ -16,6 +16,12 @@ export const Zero = ({ sign }) => {
     font-family: Montserrat;
     margin: 5px;
     font-size: x-large;
+    @media (max-width: 415px) {
+      width: 46%;
+      height: 50px;
+      border-radius: 12.5px;
+      font-size: medium;
+    }
   `;
 
   const { handleSetDisplayValue } = useContext(NumberContext);

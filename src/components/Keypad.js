@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NumberButton, Button } from "./NumberButton";
+import React from "react";
+import { NumberButton } from "./NumberButton";
 import { FunctionButton } from "./FunctionButton";
 import { ClearButton } from "./ClearButton";
 import styled from "styled-components";
@@ -8,10 +8,7 @@ import { BackButton } from "./BackButton";
 import { Equal } from "./Equal";
 import { Negative } from "./NegativeButton";
 import { Zero } from "./Zero";
-//import { NumberContext } from "./Context/NumberContext";
 export const Keypad = () => {
-  //const [result, setResult] = useState(0);
-  // const [calculate, setCalculate] = useState([]);
   const Container = styled.div`
     position: relative;
     margin: auto;
@@ -27,30 +24,12 @@ export const Keypad = () => {
     margin-top: 20px;
   `;
 
-  // const handleNumbers = (e) => {
-  //   const value = Number(e.target.innerText);
-  //   console.log(value);
-  //   setResult(value);
-  //   calculate.push(value);
-
-  //   calculate.reduce((acc, curr) => console.log(acc + curr));
-  // };
-  // const handleSigns = (e) => {
-  //   const value = e.target.innerText;
-  //   if (value === "+") {
-  //     calculate.push(value);
-  //   }
-  //   // value === "+" ? calculate.push(value) : console.log("error");
-  //   //  calculate.push(value);
-  //   console.log(calculate);
-  // };
   return (
     <Container>
       <Result />
       <ClearButton />
       <BackButton />
       <Negative /> <FunctionButton sign="x" />
-      {/* <FunctionButton sign="%" /> */}
       <br />
       <NumberButton sign={7} />
       <NumberButton sign={8} />

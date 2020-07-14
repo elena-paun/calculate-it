@@ -15,13 +15,15 @@ export const Button = styled.button`
   font-family: Montserrat;
   margin: 5px;
   font-size: x-large;
+  @media (max-width: 415px) {
+    width: 50px;
+    height: 50px;
+    border-radius: 12.5px;
+    font-size: medium;
+  }
 `;
 export const NumberButton = ({ sign }) => {
   const { handleSetDisplayValue } = useContext(NumberContext);
 
-  return (
-    <>
-      <Button onClick={() => handleSetDisplayValue(sign)}>{sign}</Button>
-    </>
-  );
+  return <Button onClick={() => handleSetDisplayValue(sign)}>{sign}</Button>;
 };

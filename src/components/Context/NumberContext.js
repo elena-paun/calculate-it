@@ -19,6 +19,8 @@ export const NumberProvider = ({ children }) => {
     setNumber("0");
   };
   const handleBackButton = () => {
+    if (number === "") setNumber("0");
+
     setNumber(number.substring(0, number.length - 1));
   };
   const handleSetCalcFunction = (type) => {
@@ -29,7 +31,6 @@ export const NumberProvider = ({ children }) => {
     if (storedNumber) {
       setFunctionType(type);
     }
-    // console.log(storedNumber);
   };
   const handleNegative = () => {
     if (number) {
@@ -57,7 +58,6 @@ export const NumberProvider = ({ children }) => {
               ) / 100
             }`
           );
-          // console.log(storedNumber);
           break;
         case "-":
           setStoredNumber(
@@ -72,7 +72,7 @@ export const NumberProvider = ({ children }) => {
           setStoredNumber(
             `${
               Math.round(
-                `${parseFloat(storedNumber) * parseFloat(number) * 100}`
+                `${parseFloat(storedNumber) * parseFloat(number) * 1000}`
               ) / 1000
             }`
           );
@@ -81,7 +81,7 @@ export const NumberProvider = ({ children }) => {
           setStoredNumber(
             `${
               Math.round(
-                `${(parseFloat(storedNumber) / parseFloat(number)) * 100}`
+                `${(parseFloat(storedNumber) / parseFloat(number)) * 1000}`
               ) / 1000
             }`
           );
